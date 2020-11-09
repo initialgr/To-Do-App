@@ -14,11 +14,15 @@ import com.example.todoapp.data.model.ToDoData
 
 class SharedViewModel(application: Application) : AndroidViewModel(application) {
 
-    val emptyDatabase : MutableLiveData<Boolean> = MutableLiveData(true)
+    /** =========================== List Fragment ======================== */
+
+    val emptyDatabase : MutableLiveData<Boolean> = MutableLiveData(false)
 
     fun checkIfDatabaseEmpty(toDoData: List<ToDoData>){
         emptyDatabase.value = toDoData.isEmpty()
     }
+
+    /** ================================================ Add/Update Fragment ===========================*/
 
     val listener: AdapterView.OnItemSelectedListener = object :
 
@@ -56,14 +60,6 @@ class SharedViewModel(application: Application) : AndroidViewModel(application) 
                 Priority.LOW
             }
             else -> Priority.LOW
-        }
-    }
-
-    fun parsePriorityToInt(priority: Priority): Int{
-        return when(priority){
-            Priority.HIGH -> 0
-            Priority.MEDIUM -> 1
-            Priority.LOW -> 2
         }
     }
 
