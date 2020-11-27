@@ -9,13 +9,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.todoapp.R
-import com.example.todoapp.data.model.Priority
 import com.example.todoapp.data.model.ToDoData
 import com.example.todoapp.data.viewmodel.ToDoViewModel
 import com.example.todoapp.databinding.FragmentUpdateBinding
 import com.example.todoapp.fragments.SharedViewModel
 import kotlinx.android.synthetic.main.fragment_update.*
-import kotlinx.android.synthetic.main.fragment_update.view.*
 
 class UpdateFragment : Fragment() {
 
